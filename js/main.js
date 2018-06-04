@@ -54,6 +54,7 @@ function mergeGraphs(newNodes, newLinks){
 function createPredicateFilters(up){
 	//d3.select("#preds").append("div").attr("class", "filter")
 	//                     .html("<input type='checkbox' id='all' class='all'/><label for='all'>All Predicates</label>");
+	console.log(up);
 	for(i in up){
 		d3.select("#preds").append("div").attr("class", "filter")
 		.html("<input type='checkbox' id='"+i+"' class='pred-filter'/><label for='"+i+"'>"+i+"</label>");
@@ -61,6 +62,7 @@ function createPredicateFilters(up){
 	updateFilters();
 }
 function init(json){
+	console.log(json);
 	literals = json.literals;
 	for(i in json.links){
 		uniquePredicates[json.links[i].name] = 1;
@@ -224,6 +226,8 @@ function init(json){
 		});
 
 	});
+	$('#hidePredicates').trigger('click');
+	$('.pred-filter').trigger('click');
 
 			/*node.filter(function(d){return d.type == "uri"}).on('click', function(d){
 					restart(d.uri);
@@ -274,4 +278,3 @@ function updateFilters(){
 
 
 restart(url);
-
