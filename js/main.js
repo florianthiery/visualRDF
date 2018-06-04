@@ -125,11 +125,11 @@ function init(json){
 	.append("svg:circle")
 	.attr("class", "node")
 	.attr("r", 10)
-	.attr("x", "-8px")
-	.attr("y", "-8px")
-	.attr("width", "16px")
-	.attr("height", "16px")
-	.style("fill", "#CFEFCF")
+	.attr("x", "-10px")
+	.attr("y", "-10px")
+	.attr("width", "20px")
+	.attr("height", "20px")
+	.style("fill", "DodgerBlue")
 	.style("stroke", "#000");
 
 

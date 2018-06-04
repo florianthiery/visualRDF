@@ -5,7 +5,7 @@ if(isset($_GET['url'])){
 }else{
   $indexless = str_replace("index.php", "", $url);
   header("Location: $indexless?url=$indexless");
-  
+
 }
 
 
@@ -31,14 +31,14 @@ function get_current_url() {
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:dc="http://purl.org/dc/elements/1.1/">
 <head>
-<meta rel="dc:creator" href="http://alvaro.graves.cl" /> 
-<meta rel="dc:source" href="http://github.com/alangrafu/visualRDF" /> 
-<meta property="dc:modified" content="2012-05-18" /> 
-<meta charset='utf-8'> 
+<meta rel="dc:creator" href="http://linkedgeodesy.org" />
+<meta rel="dc:source" href="http://github.com/alangrafu/visualRDF" />
+<meta property="dc:modified" content="2012-05-18" />
+<meta charset='utf-8'>
 <link href='css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css' />
 <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css' />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/d3/d3.js"></script>
 <script type="text/javascript" src="js/d3/d3.layout.js"></script>
@@ -59,12 +59,10 @@ var url = '<?=$url?>',
 <body>
 <div class="container-fluid">
  <div class="row-fluid">
-  <div class="span2"><h1 style="display: inline"><a href='.'>Visual RDF</a></h1></div>
-  <div class="span2"><a href='https://github.com/alangrafu/visualRDF' target="_new"><img alt="github icon" src='img/github.ico'/></a></div>
-  <div class="span2"><span id="dialogButton" style="text-decoration:none;vertical-align:middle;font-weight:bold;font-size:200%;font-family:courier;color:black;cursor: hand; cursor: pointer;">&lt;/&gt;</span></div>
-  <div class="span6">
-   <strong style="color: red">Usage: </strong> <strong>Scroll</strong> &#8594; Zoom. <strong>Drag node</strong> &#8594; Move node. <strong>Drag background</strong> &#8594; Move graph.
-  </div>
+  <div class="span2"><h1 style="width:800px !important">Alligator RDF Visualisation via "Visual RDF"</h1></div>
+  <!--<div class="span2"><a href='https://github.com/alangrafu/visualRDF' target="_new"><img alt="github icon" src='img/github.ico'/></a></div>-->
+  <!--<div class="span2"><span id="dialogButton" style="text-decoration:none;vertical-align:middle;font-weight:bold;font-size:200%;font-family:courier;color:black;cursor: hand; cursor: pointer;">&lt;/&gt;</span></div>-->
+  <div class="span6"></div>
  </div>
  <div class="row-fluid">
   <div class="span6">
@@ -77,15 +75,15 @@ var url = '<?=$url?>',
    <form method="get" action="." class="form-inline">
     <input type="checkbox" checked id="properties"/>
       <label>Hide properties</label>
-    <input type="checkbox" id="hidePredicates"/>
+    <input type="checkbox" checked id="hidePredicates"/>
       <label>Hide predicates</label>
-   <div id="preds" style="border: 1px solid black; position:absolute; display:none; color: white; background: rgba(0, 0, 0, 0.6);;"></div>
+   <div id="preds" style="border: 1px solid black; position:absolute; display:none; color: white; background: rgba(0, 0, 0, 1);margin-left:20px;padding:10px;"></div>
    </form>
   </div>
   <img id="waiting" alt="waiting icon" src="img/waiting.gif"/>
  </div>
 </div>
-<div style="float: left;border-width: 1px; border-style: solid;width:100%;min-height:500px;height:100%" id='chart'></div>
+<div style="float: left;border-width: 1px; border-style: solid;width:100%;min-height:800px;height:800px;" id='chart'></div>
 <script type="text/javascript" src='js/main.js'>
 </script>
 
@@ -127,5 +125,3 @@ $(".close").on('click', function(){
 </div>
 </body>
 </html>
-
-
