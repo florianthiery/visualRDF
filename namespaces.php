@@ -664,4 +664,7 @@ $ns["visko"]		=	"http://trust.utep.edu/visko/ontology/visko-operator-v3.owl#";
 $ns["geovocab"]		=	"http://geovocab.org/";
 $ns["lda"]		=	"http://lodspeakr.org/lda/";
 $ns["poder"]		=	"http://poderopedia.com/vocab/";
+/* alligator */
+$ns["alligator"]		=	"http://rgzm.github.io/alligator/ontology#";
+$ns["ae"]		=	"http://example.net/event#";
 ?>
